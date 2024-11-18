@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Check Result</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./imgs/rankings.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <div class="test">
+        <h4>Test Names</h4>
+        <div class="one">
+            Name: <span>Hasnain</span>
+            RN: <span>268797</span>
+            E-mail: <span>a@gmail.com</span>
+        </div>
+        <div class="two">
+            Name: <span>Abby</span>
+            RN: <span>264877</span>
+            E-mail: <span>ab@gmail.com</span>
+        </div>
+        <div class="three">
+            Name: <span>Tom</span>
+            RN: <span>262717</span>
+            E-mail: <span>tm@gmail.com</span>
+        </div>
+        <div class="four">
+            Name: <span>Ross</span>
+            RN: <span>265794</span>
+            E-mail: <span>rs@gmail.com</span>
+        </div>
+    </div>
+
+    <div class="main">
+
+        <div class="inpParent">
+            <h2>Check your Result</h2>
+            <div class="name">
+                <input type="text" placeholder="Enter your name" onInput="blurInp(event, 'name')" />
+                <span class="name-error error"></span>
+            </div>
+
+            <div class="pass">
+                <input type="number" placeholder="Enter your Roll Number" onInput="blurInp(event, 'RN')" />
+                <span class="pass-error error"></span>
+            </div>
+
+            <div class="email">
+                <input type="text" placeholder="Enter your E-Mail" onInput="blurInp(event, 'mail')" />
+                <span class="email-error error"></span>
+            </div>
+
+            <div class="submit">
+                <button type="submit" onClick="showData()">Check</button>
+            </div>
+        </div>
+
+        <div id="err">
+            <h2>Result not Found!</h2>
+        </div>
+
+        <div id="data">
+            <table border="1px">
+                <tr>
+                    <th>Name</th>
+                    <th id="rn">Roll Number</th>
+                    <th>Contact</th>
+                    <th>Result</th>
+                </tr>
+                <tr>
+                    <td id="name"></td>
+                    <td id="RN"></td>
+                    <td id="Con"></td>
+                    <td id="Res"></td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
